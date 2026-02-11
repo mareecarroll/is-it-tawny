@@ -31,7 +31,7 @@ conda activate is_it_tawny
 pre-commit install
 ```
 
-## Bulid instructions
+## Build instructions
 
 ```script
 mkdir -p build
