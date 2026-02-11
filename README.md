@@ -13,7 +13,7 @@ This is a pipeline in python to train a model to distinguish photos that contain
 
 1. Load your CSV (filename, label)
 2. Create a PyTorch Dataset that reads images from disk
-3. Train a transfer‑learning model (e.g., ResNet‑18 or MobileNetV2)
+3. Train a transfer‑learning model (ResNet‑18)
 4. Export to ONNX so you can run it in C++ with OpenCV
 
 # Developing the package
