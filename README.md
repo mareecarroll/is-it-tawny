@@ -30,3 +30,35 @@ conda activate is_it_tawny
 ```shell
 pre-commit install
 ```
+
+## Bulid instructions
+
+```script
+mkdir -p build
+cd build
+cmake -B build -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ..
+make
+```
+
+## Running the inference
+
+Examples:
+
+![Is not a Tawny](is_it_tawny/tests/test_not_tawny.jpg)
+
+
+```script
+$ ./build/infer tawny_classifier.onnx tests/test_not_tawny.jpg
+Prediction: not_tawny
+  P(not_tawny) = 0.999424
+  P(is_tawny)  = 0.000576206
+```
+
+![Is a Tawny](is_it_tawny/tests/test_is_tawny.jpg)
+
+```script
+$ ./build/infer tawny_classifier.onnx tests/test_is_tawny.jpg
+Prediction: is_tawny
+  P(not_tawny) = 0.00652952
+  P(is_tawny)  = 0.99347
+```
